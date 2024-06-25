@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrod 13 Installer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Android_13_Developer_Preview_logo.svg/2060px-Android_13_Developer_Preview_logo.svg.png" alt="Android 13 Logo">
+    <h1>Adrod 13 Installer</h1>
+    <div class="buttons">
+        <button onclick="installFunction()">Install</button>
+        <button onclick="backFunction()">Back</button>
+    </div>
+
+    <script>
+        function installFunction() {
+            var newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Adrod 13 Installer</title>
+                    </head>
+                    <body>
+                        <a href='https://postimg.cc/Ty8fRQRm' target='_blank'>
+                            <img src='https://i.postimg.cc/5ty0SkTP/yer-Wii-U-is-brick.png' border='0' alt='yer-Wii-U-is-brick'/>
+                        </a>
+                        <audio id="audio" src="https://www.myinstants.com/media/sounds/goofy-ahh-android-ringtone.mp3" autoplay></audio>
+                    </body>
+                </html>
+            `);
+            newWindow.document.close(); // Necessary to apply the document.write content
+        }
+
+        function backFunction() {
+            alert('Back button clicked');
+            // Add your back functionality here
+        }
+    </script>
+</body>
+</html>
